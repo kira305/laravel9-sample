@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(\App\Contracts\Services\MovieFavorite::class, \App\Services\MovieFavorite::class);
+        $this->app->singleton(\App\Contracts\Repositories\MovieFavorite::class, \App\Repositories\MovieFavorite::class);
     }
 
     /**
